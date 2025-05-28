@@ -25,5 +25,9 @@ def analyze_sms():
     }
     return jsonify(result)
 
+@app.route('/', methods=['GET'])  # ✅ Ruta principal
+def home():
+    return '✅ Backend Flask en Railway está funcionando correctamente.'
+
 if __name__ == "__main__":
     app.run(debug=True, host="0.0.0.0", port=5000)
